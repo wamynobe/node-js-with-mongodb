@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import Restaurant from '../models/restaurant.js';
-// create new cause
-export function createRestaurant(req, res) {
+import Restaurant from '../../models/restaurant_model/restaurant.js';
+
+export async function createRestaurant(req, res) {
     const restaurant = new Restaurant({
         _id: mongoose.Types.ObjectId(),
         address: req.body.address,
